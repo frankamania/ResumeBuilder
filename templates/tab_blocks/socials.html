@@ -1,0 +1,69 @@
+<form action="" method="post">
+    {% csrf_token %}
+   
+
+    <div class="form-group row">
+<div class="form-group col-md-6 mb-3">
+                <label for={{ metadata.linkdin_url.name }}>{{ metadata.linkdin_url.label }}</label>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for={{ metadata.show_linkdin_url.name }}>{{ metadata.show_linkdin_url.label }}</label>
+                    <input type="checkbox" id={{ metadata.show_linkdin_url.name }} name={{ metadata.show_linkdin_url.name }}  value="1" {% if instance.show_linkdin_url %}checked{% endif %}>
+                </div>
+                <input type="text" class="container-text input" id={{ metadata.linkdin_url.name }} name={{ metadata.linkdin_url.name }} placeholder={{ metadata.linkdin_url.placeholder }} {% if instance != None %} value={{ instance.linkdin_url }}{% endif %}>
+            </div>
+
+<div class="form-group col-md-6 mb-3">
+                <label for={{ metadata.facebook_url.name }}>{{ metadata.facebook_url.label }}</label>
+                <div class="form-check form-switch">
+                  <input type="checkbox" id={{ metadata.show_facebook_url.name }} name={{ metadata.show_facebook_url.name }}  value="1" {% if instance.show_facebook_url %}checked{% endif %}>
+                  <label class="form-check-label" for={{ metadata.show_facebook_url.name }}>{{ metadata.show_facebook_url.label }}</label>
+                </div>
+                <input type="text" class="container-text input" id={{ metadata.facebook_url.name }} name={{ metadata.facebook_url.name }} placeholder={{ metadata.facebook_url.placeholder }} {% if instance != None %} value={{ instance.facebook_url }}{% endif %}>
+            </div>
+    </div>
+<div class="form-group row">
+<div class="form-group col-md-6 mb-3">
+                <label for={{ metadata.twitter_url.name }}>{{ metadata.twitter_url.label }}</label>
+                <div class="form-check form-switch">
+                  <input type="checkbox" id={{ metadata.show_twitter_url.name }} name={{ metadata.show_twitter_url.name }}  value="1" {% if instance.show_twitter_url %}checked{% endif %}>
+                  <label class="form-check-label" for={{ metadata.show_twitter_url.name }}>{{ metadata.show_twitter_url.label }}</label>
+                </div>
+                <input type="text" class="container-text input" id={{ metadata.twitter_url.name }} name={{ metadata.twitter_url.name }} placeholder={{ metadata.twitter_url.placeholder }} {% if instance != None %} value={{ instance.twitter_url }}{% endif %}>
+            </div>
+
+<div class="form-group col-md-6 mb-3">
+                <label for={{ metadata.youtube_url.name }}>{{ metadata.youtube_url.label }}</label>
+                <div class="form-check form-switch">
+                  <input type="checkbox" id={{ metadata.show_youtube_url.name }} name={{ metadata.show_youtube_url.name }}  value="1" {% if instance.show_youtube_url %}checked{% endif %}>
+                  <label class="form-check-label" for={{ metadata.show_youtube_url.name }}>{{ metadata.show_youtube_url.label }}</label>
+                </div>
+                <input type="text" class="container-text input" id={{ metadata.youtube_url.name }} name={{ metadata.youtube_url.name }} placeholder={{ metadata.youtube_url.placeholder }} {% if instance != None %} value={{ instance.youtube_url }}{% endif %}>
+            </div>
+    </div>
+<div class="form-group row">
+<div class="form-group col-md-6 mb-3">
+                <label for={{ metadata.whatsapp_url.name }}>{{ metadata.whatsapp_url.label }}</label>
+                <div class="form-check form-switch">
+                  <input type="checkbox" id={{ metadata.show_whatsapp_url.name }} name={{ metadata.show_whatsapp_url.name }}  value="1" {% if instance.show_whatsapp_url %}checked{% endif %}>
+                  <label class="form-check-label" for={{ metadata.show_whatsapp_url.name }}>{{ metadata.show_whatsapp_url.label }}</label>
+                </div>
+                <input type="text" class="container-text input" id={{ metadata.whatsapp_url.name }} name={{ metadata.whatsapp_url.name }} placeholder={{ metadata.whatsapp_url.placeholder }} {% if instance != None %} value={{ instance.whatsapp_url }}{% endif %}>
+            </div>
+
+<div class="form-group col-md-6 mb-3">
+                <label for={{ metadata.telegram_url.name }}>{{ metadata.telegram_url.label }}</label>
+                <div class="form-check form-switch">
+                  <input type="checkbox" id={{ metadata.show_telegram_url.name }} name={{ metadata.show_telegram_url.name }}  value="1" {% if instance.show_telegram_url %}checked{% endif %}>
+                  <label class="form-check-label" for={{ metadata.show_telegram_url.name }}>{{ metadata.show_telegram_url.label }}</label>
+                </div>
+                <input type="text" class="container-text input" id={{ metadata.telegram_url.name }} name={{ metadata.telegram_url.name }} placeholder={{ metadata.telegram_url.placeholder }} {% if instance != None %} value={{ instance.telegram_url }}{% endif %}>
+            </div>
+    </div>
+
+      <input type="submit" value="Save" class="save_button">
+
+
+
+
+
+</form>

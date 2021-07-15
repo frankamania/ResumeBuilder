@@ -1,0 +1,870 @@
+.mediaViewInfo {
+	--web-view-name: Web 1920 – 1;
+	--web-view-id: Web_1920__1;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Web_1920__1;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+.Web_1920__1_Class {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: Web 1920 – 1;
+	--web-view-id: Web_1920__1;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+.navigation_items_Class {
+	position: absolute;
+	width: 1879px;
+	height: 74px;
+	left: 22px;
+	top: 41px;
+	overflow: visible;
+}
+.course_Class {
+	position: absolute;
+	width: 150px;
+	height: 74px;
+	left: 1134px;
+	top: 0px;
+	overflow: visible;
+}
+.box_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.Courses_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 24px;
+	top: 21px;
+	position: absolute;
+	overflow: visible;
+	width: 103px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.certification_Class {
+	position: absolute;
+	width: 205px;
+	height: 74px;
+	left: 904px;
+	top: 0px;
+	overflow: visible;
+}
+.box_l_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_l {
+	position: absolute;
+	overflow: visible;
+	width: 205px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.Certification_m_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 15px;
+	top: 16px;
+	position: absolute;
+	overflow: visible;
+	width: 171px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.finalresume_Class {
+	position: absolute;
+	width: 224px;
+	height: 74px;
+	left: 1655px;
+	top: 0px;
+	overflow: visible;
+}
+.box_o_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_o {
+	position: absolute;
+	overflow: visible;
+	width: 224px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.finalresume_p_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 35px;
+	top: 18px;
+	position: absolute;
+	overflow: visible;
+	width: 155px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.projects_Class {
+	position: absolute;
+	width: 160px;
+	height: 74px;
+	left: 729px;
+	top: 0px;
+	overflow: visible;
+}
+.box_r_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_r {
+	position: absolute;
+	overflow: visible;
+	width: 160px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.projects_s_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 24px;
+	top: 17px;
+	position: absolute;
+	overflow: visible;
+	width: 113px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.objective_Class {
+	position: absolute;
+	width: 190px;
+	height: 74px;
+	left: 287px;
+	top: 0px;
+	overflow: visible;
+}
+.box_u_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_u {
+	position: absolute;
+	overflow: visible;
+	width: 190px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.Objectives_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 23px;
+	top: 17px;
+	position: absolute;
+	overflow: visible;
+	width: 145px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.experience_Class {
+	position: absolute;
+	width: 202px;
+	height: 74px;
+	left: 502px;
+	top: 0px;
+	overflow: visible;
+}
+.box_x_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_x {
+	position: absolute;
+	overflow: visible;
+	width: 202px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.Experiences_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 20px;
+	top: 17px;
+	position: absolute;
+	overflow: visible;
+	width: 161px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.socials_Class {
+	position: absolute;
+	width: 131px;
+	height: 74px;
+	left: 130px;
+	top: 0px;
+	overflow: visible;
+}
+.box__Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_ {
+	position: absolute;
+	overflow: visible;
+	width: 131px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.socials__Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 18px;
+	top: 15px;
+	position: absolute;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.about_Class {
+	position: absolute;
+	width: 116px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.box_ba_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_ba {
+	position: absolute;
+	overflow: visible;
+	width: 116px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.About__Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 18px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 81px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.skills_Class {
+	position: absolute;
+	width: 121px;
+	height: 74px;
+	left: 1520px;
+	top: 0px;
+	overflow: visible;
+}
+.box_bb_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_bb {
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.Skills__Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 25px;
+	top: 18px;
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.education_Class {
+	position: absolute;
+	width: 194px;
+	height: 74px;
+	left: 1298px;
+	top: 0px;
+	overflow: visible;
+}
+.box_bc_Class {
+	fill: rgba(29,89,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.box_bc {
+	position: absolute;
+	overflow: visible;
+	width: 194px;
+	height: 74px;
+	left: 0px;
+	top: 0px;
+}
+.Education_ba_Class {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	left: 33px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 129px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.container_Class {
+	position: absolute;
+	width: 1245px;
+	height: 861px;
+	left: 311px;
+	top: 176px;
+	overflow: visible;
+}
+.inputcontainer_Class {
+	fill: rgba(29,89,255,0.988);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputcontainer {
+	position: absolute;
+	overflow: visible;
+	width: 1245px;
+	height: 861px;
+	left: 0px;
+	top: 0px;
+}
+.firstname_Class {
+	position: absolute;
+	width: 513px;
+	height: 148px;
+	left: 98px;
+	top: 50px;
+	overflow: visible;
+}
+.inputfield_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 58px;
+}
+.First_Name_Class {
+	left: 114px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 153px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_Class {
+	left: 185px;
+	top: 84px;
+	position: absolute;
+	overflow: visible;
+	width: 145px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.Lastname_Class {
+	position: absolute;
+	width: 513px;
+	height: 148px;
+	left: 676px;
+	top: 50px;
+	overflow: visible;
+}
+.inputfield_bi_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield_bi {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 58px;
+}
+.Last_Name_Class {
+	left: 117px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 147px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_bk_Class {
+	left: 184px;
+	top: 84px;
+	position: absolute;
+	overflow: visible;
+	width: 147px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.phonenumber_Class {
+	position: absolute;
+	width: 513px;
+	height: 148px;
+	left: 98px;
+	top: 216px;
+	overflow: visible;
+}
+.inputfield_bm_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield_bm {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 58px;
+}
+.Phone_Number_Class {
+	left: 88px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 195px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_bo_Class {
+	left: 165px;
+	top: 77px;
+	position: absolute;
+	overflow: visible;
+	width: 185px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.email_Class {
+	position: absolute;
+	width: 513px;
+	height: 142px;
+	left: 676px;
+	top: 222px;
+	overflow: visible;
+}
+.inputfield_bq_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield_bq {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 52px;
+}
+.Email_br_Class {
+	left: 120px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 71px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_bs_Class {
+	left: 222px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 71px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.City_Class {
+	position: absolute;
+	width: 513px;
+	height: 142px;
+	left: 98px;
+	top: 572px;
+	overflow: visible;
+}
+.inputfield_bu_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield_bu {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 52px;
+}
+.City_bv_Class {
+	left: 128px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_bw_Class {
+	left: 203px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.State_Class {
+	position: absolute;
+	width: 513px;
+	height: 142px;
+	left: 676px;
+	top: 386px;
+	overflow: visible;
+}
+.inputfield_by_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield_by {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 52px;
+}
+.State_bz_Class {
+	left: 116px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 79px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_b_Class {
+	left: 205px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 79px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.Country_Class {
+	position: absolute;
+	width: 513px;
+	height: 142px;
+	left: 98px;
+	top: 390px;
+	overflow: visible;
+}
+.inputfield_b_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.inputfield_b {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 90px;
+	left: 0px;
+	top: 52px;
+}
+.Country_b_Class {
+	left: 103px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 105px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+}
+.placeholder_ca_Class {
+	left: 175px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 105px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}
+.save_button_Class {
+	position: absolute;
+	width: 205px;
+	height: 71px;
+	left: 111px;
+	top: 762px;
+	overflow: visible;
+}
+.Rectangle_1_Class {
+	fill: rgba(255,255,255,1);
+}
+.Rectangle_1 {
+	filter: drop-shadow(0px 3px 6px rgba(87, 75, 75, 0));
+	position: absolute;
+	overflow: visible;
+	width: 223px;
+	height: 89px;
+	left: 0px;
+	top: 0px;
+}
+.Save_Class {
+	left: 70px;
+	top: 16px;
+	position: absolute;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(29,89,255,1);
+}

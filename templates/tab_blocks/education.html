@@ -1,0 +1,78 @@
+<div class="row">
+
+  <div class="col-md-3 order-md-1 mb-3">
+      <div class="list-group">
+
+          {% for item in instances %}
+
+          <a href="{% url 'resume_education_single' resume_id item.id %}" class="list-group-item skillsgradient {% if instance != None and item.id == instance.id %}active{% endif %}" aria-current="true">
+          <div class="row">
+                <div class="col-md-8 order-md-1 mb-3">
+                    <div>
+                        <small>{{ item.digree_major_qualification }} {% if item.Score != "" and item.Score != None %}({{ item.Score }} GPA) {% endif %}</small>
+                       <small>{{ item.organization_name }},{{ item.organization_location }}</small>
+                    </div>
+                    <small>{{ item.date }}</small>
+
+
+                <form id="delete_form" class="skills" action="{% url 'resume_education_single_delete' resume_id item.id %}" method="get">
+                    <button type="submit" class="list_item_btn">Delete</button>
+                </form>
+                </div>
+          </div>
+
+          </a>
+
+
+          {% endfor %}
+
+        <a {% if instance != None %}href="{% url 'resume_education' resume_id %}" class="list-group-item btn" {% else %} class="active list-group-item btn"{% endif %}>ADD A new {{ templ_type }}</a>
+
+
+    </div>
+  </div>
+
+
+  <div class="col-md-8 order-md-2">
+      <form action="" method="post">
+    {% csrf_token %}
+  
+    <div class="form-group row">
+
+        <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.digree_major_qualification.name }}">{{ metadata.digree_major_qualification.label }}</label>
+            <input type="text" class="container-text input" id="{{ metadata.digree_major_qualification.name }}" name="{{ metadata.digree_major_qualification.name }}" placeholder="{{ metadata.digree_major_qualification.placeholder }}" {% if instance != None %} value="{{ instance.digree_major_qualification }}"{% endif %}>
+        </div>
+        <div class="form-group col-md-6 mb-3">
+                <label for="{{ metadata.organization_name.name }}">{{ metadata.organization_name.label }}</label>
+                <input type="text" class="container-text input" id="{{ metadata.organization_name.name }}" name="{{ metadata.organization_name.name }}" placeholder="{{ metadata.organization_name.placeholder }}" {% if instance != None %} value="{{ instance.organization_name  }}"{% endif %}>
+            </div>
+        </div>
+
+    <div class="form-group row">
+
+        <div class="form-group">
+            <label for="{{ metadata.organization_location.name }}">{{ metadata.organization_location.label }}</label>
+            <input type="text" class="container-text input" id="{{ metadata.organization_location.name }}" name="{{ metadata.organization_location.name }}" placeholder="{{ metadata.organization_location.placeholder }}" {% if instance != None %} value="{{ instance.organization_location }}"{% endif %}>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.date.name }}">{{ metadata.date.name }}</label>
+            <input type="date" class="container-text input" id="{{ metadata.date.name }}" name="{{ metadata.date.name }}" placeholder="{{ metadata.date.placeholder }}" {% if instance != None %} value="{{ instance.date }}"{% endif %}>
+        </div>
+
+         <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.score.name }}">{{ metadata.score.label }}</label>
+             <input type="text" class="container-text input" id="{{ metadata.score.name }}" name="{{ metadata.score.name }}" placeholder="{{ metadata.score.placeholder }}" {% if instance != None %} value="{{ instance.Score }}"{% endif %}>
+         </div>
+
+    </div>
+
+
+      <input type="submit" value="Save" class="save_button">
+      
+</form>
+  </div>
+</div>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+
+  background-color: rgb(236, 236, 236);
+
+  padding: 1em;
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+  font-style: normal;
+  font-weight: bold;
+    height:100%;
+    width:100%;
+    margin:0;
+text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+  color: #a8a8a8;
+  text-shadow: 1px 1px 0 white;
+}
+
+form {
+
+  text-align: center;
+
+}
+form input, form textarea {
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+
+
+
+li.nav-item a.nav-link{
+  background-color: rgba(112,112,112,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 2px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  height: auto;
+  border-radius: unset;
+  -moz-border-radius: 0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.161);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+  display: block;
+  padding: 0.5rem 1rem;
+
+
+
+}
+
+
+li.nav-item a.nav-link.active{
+  background-color:rgba(29,89,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 2px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  height: auto;
+  border-radius: unset;
+  -moz-border-radius: 0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.161);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  display: block;
+  padding: 0.5rem 1rem;
+
+
+
+
+}
+
+
+.container-text.input{
+  border: 2px solid #daddec;
+  border-radius: 0;
+  stroke-width: 0;
+  background-color: #ffffff;
+  color: #000000;
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+  font-style: normal;
+  font-weight: bold;
+}
+.save_button{
+  border: unset;
+  background-color:rgba(29,89,255,1);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+div.col.sidebox{
+  width: 20%;
+}
+div.col.myform{
+  width: 80%;
+}
+
+form.skills {
+  margin: unset;
+  padding: unset;
+  text-align: center;
+
+}
+
+button.list_item_btn{
+  border: unset;
+  margin: unset;
+  background-color: rgb(255, 65, 104);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.list-group-item.btn{
+  border: 2px;
+  margin: 5px;
+  background-color: rgb(255, 65, 104);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  display: block;
+  padding: 0.5rem;
+}
+
+.list-group-item.btn.active{
+    background-color: rgb(45, 92, 255);
+}
+
+.list-group-item.btn.sk.active{
+    background-color: rgb(45, 92, 255);
+}
+
+.list-group-item.btn.sk{
+    background-color: rgb(45, 92, 255);
+}
+
+.list-group-item.skillsgradient{
+  margin: 5px;
+   border: 2px;
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  color: rgb(45, 92, 255);
+  font-size: 1rem;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  padding: 0.5rem;
+
+}
+.list-group-item.skillsgradient.active{
+  border: solid rgb(45, 92, 255);
+  border-width: 3px;
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  color: rgb(45, 92, 255);
+}
+
+.addbuttonGradient{
+  margin: 5px;
+  background: #ffffff;  /* fallback for old browsers */
+  border-color: #0d6efd;
+  border: 2px;
+
+}

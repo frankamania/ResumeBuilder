@@ -1,0 +1,76 @@
+
+
+<div class="row">
+
+      <div class="col-md-3 order-md-1 mb-3">
+          <div class="list-group">
+              {% for item in instances %}
+
+                  <a href="{% url 'resume_projects_single' resume_id item.id %}" class="list-group-item skillsgradient {% if instance != None and item.id == instance.id %}active{% endif %}" aria-current="true">
+                  <div class="row">
+                        <div class="col-md-8 order-md-1 mb-3">
+                            <div>
+                                <small>{{ item.project_name }}</small>
+                               <small>{{ item.organization_name }}</small>
+                            </div>
+                            <small>{{ item.date }}</small>
+
+
+                        <form id="delete_form" class="skills" action="{% url 'resume_projects_single_delete' resume_id item.id %}" method="get">
+                            <button type="submit" class="list_item_btn">Delete</button>
+                        </form>
+                        </div>
+                  </div>
+
+                  </a>
+
+
+              {% endfor %}
+
+
+             <a {% if instance != None %}href="{% url 'resume_projects' resume_id %}" class="list-group-item btn" {% else %} class="active list-group-item btn"{% endif %}>ADD A new {{ templ_type }}</a>
+
+
+
+
+        </div>
+      </div>
+
+
+  <div class="col-md-8 order-md-2">
+      <form action="" method="post">
+    {% csrf_token %}
+
+    <div class="form-group row">
+        <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.project_name.name }}">{{ metadata.project_name.label }}</label>
+            <input type="text" class="container-text input" id="{{ metadata.project_name.name }}" name="{{ metadata.project_name.name }}" placeholder="{{ metadata.project_name.placeholder }}" {% if instance != None %} value="{{ instance.project_name }}"{% endif %}>
+        </div>
+            <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.organization_name.name }}">{{ metadata.organization_name.label}}</label>
+            <input type="text" class="container-text input" id="{{ metadata.organization_name.name }}" placeholder="{{ metadata.organization_name.placeholder }}" name="{{ metadata.organization_name.name }}"  {% if instance != None %} value="{{ instance.organization_name }}"{% endif %}>
+        </div>
+    </div>
+
+
+
+    <div class="form-group row">
+
+        <div class="form-group mb-3">
+            <label for="{{ metadata.date.name }}">{{ metadata.date.label }}</label>
+            <input type="date" class="container-text input" id="{{ metadata.date.name }}" placeholder="{{ metadata.date.placeholder }}" name="{{ metadata.date.name }}"  {% if instance != None %} value="{{ instance.date }}"{% endif %}>
+        </div>
+
+    </div>
+
+       <div class="form-group row">
+            <label for="{{ metadata.what_did_you_do.name }}">{{ metadata.what_did_you_do.label }}</label>
+           <textarea class="container-text input" id="{{ metadata.what_did_you_do.name }}"  rows="5" placeholder="{{ metadata.what_did_you_do.placeholder }}" name="{{ metadata.what_did_you_do.name }}"> {{ instance.what_did_you_do }}</textarea>
+      </div>
+
+
+      <input type="submit" value="Save" class="save_button">
+
+</form>
+  </div>
+</div>

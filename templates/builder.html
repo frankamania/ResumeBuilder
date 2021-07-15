@@ -1,0 +1,202 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" >
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" >
+    <title>Hello, world!</title>
+  </head>
+  <body>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}" ></script>
+      <div class="row">
+          <h1 class="align-content-center">Build Your resume!</h1>
+      </div>
+  <div class="container">
+    <div>
+
+        <span> your Custum resume url : http://127.0.0.1:8000/{% url 'showresume' resume_id %} </span>
+    </div>
+
+
+  <ul class="nav py-5 text-center">
+
+            <li class="nav-item" role="presentation">
+            <a  class="nav-link {% if templ_type == "abouts" %}active{% endif %}" href="{% url 'resume_about' resume_id %}">About</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "socials" %}active{% endif %}" href="{% url 'resume_socials' resume_id %}">socials</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "Objective" %}active{% endif %}" href="{% url 'resume_Objective' resume_id %}">Objective</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "experience" %}active{% endif %}" href="{% url 'resume_experience' resume_id %}">experience</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "projects" %}active{% endif %}" href="{% url 'resume_projects' resume_id %}">projects</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "education" %}active{% endif %}" href="{% url 'resume_education' resume_id %}">education</a>
+            </li>
+
+             {% comment %}
+
+                <li class="nav-item" role="presentation">
+                 <a  class="nav-link {% if templ_type == "certification" %}active{% endif %}" href="{% url 'resume_certification' resume_id %}">certification</a>
+                </li>
+
+
+                <li class="nav-item" role="presentation">
+                 <a  class="nav-link {% if templ_type == "coursework" %}active{% endif %}" href="{% url 'resume_coursework' resume_id %}">coursework</a>
+                </li>
+
+            {% endcomment%}
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "skills" %}active{% endif %}" href="{% url 'resume_skills' resume_id %}">skills</a>
+            </li>
+
+
+            <li class="nav-item" role="presentation">
+             <a  class="nav-link {% if templ_type == "finalresume" %}active{% endif %}" href="{% url 'resume_finalresume' resume_id %}">finalresume</a>
+          </li>
+
+
+
+
+        </ul>
+
+
+  <div class="mytab-content" >
+
+        {% if templ_type == "abouts" %}
+
+          <div class="tab-pane fade show active">
+              {% block contact_form %}
+                    {% include "tab_blocks/contact.html" %}
+              {% endblock %}
+          </div>
+
+        {% endif %}
+
+        {% if templ_type == "socials" %}
+
+          <div class="tab-pane show active">
+              {% block socials_form %}
+                    {% include "tab_blocks/socials.html" %}
+              {% endblock %}
+
+          </div>
+        {% endif %}
+
+
+
+
+     {% if templ_type == "Objective" %}
+          <div class="tab-pane show active">
+
+              {% block Objective_form %}
+                    {% include "tab_blocks/Objective.html" %}
+              {% endblock %}
+
+          </div>
+     {% endif %}
+
+
+
+     {% if templ_type == "experience" %}
+          <div class="tab-pane show active">
+
+              {% block experience_form %}
+                    {% include "tab_blocks/experience.html" %}
+              {% endblock %}
+
+          </div>
+     {% endif %}
+
+    {% if templ_type == "certification" %}
+          <div class="tab-pane show active">
+
+              {% block certification_form %}
+                    {% include "tab_blocks/certification.html" %}
+              {% endblock %}
+
+          </div>
+    {% endif %}
+
+    {% if templ_type == "coursework" %}
+        <div class="tab-pane show active">
+
+          {% block coursework_form %}
+                {% include "tab_blocks/coursework.html" %}
+          {% endblock %}
+
+      </div>
+    {% endif %}
+
+
+
+    {% if templ_type == "skills" %}
+            <div class="tab-pane show active">
+
+          {% block skills_form %}
+                {% include "tab_blocks/skills.html" %}
+          {% endblock %}
+
+      </div>
+    {% endif %}
+
+    {% if templ_type == "finalresume" %}
+          <div class="tab-pane show active">
+
+          {% block finalresume_form %}
+                {% include "tab_blocks/finalresume.html" %}
+          {% endblock %}
+
+      </div>
+    {% endif %}
+
+
+    {% if templ_type == "projects" %}
+        <div class="tab-pane show active">
+
+          {% block projects_form %}
+                {% include "tab_blocks/projects.html" %}
+          {% endblock %}
+
+        </div>
+    {% endif %}
+
+    {% if templ_type == "education" %}
+        <div class="tab-pane show active">
+
+              {% block education_form %}
+                    {% include "tab_blocks/education.html" %}
+              {% endblock %}
+
+        </div>
+    {% endif %}
+
+
+        </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  </body>
+</html>

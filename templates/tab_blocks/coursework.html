@@ -1,0 +1,114 @@
+<div class="row">
+
+{% if instances != None%}
+  <div class="col-md-3 order-md-1 mb-3">
+      <div class="list-group">
+
+          {% for item in instances %}
+
+          <a href="{% url 'resume_education_single' resume_id item.id %}" class="list-group-item {% if instance != None and item.id == instance.id %}active{% endif %}" aria-current="true">
+          <div class="row">
+                <div class="col">
+                    <div>
+                        <h5 class="mb-1">{{ item.digree_major_qualification }} from {{ item.organization_name }},{{ item.organization_location }}</h5>
+                    </div>
+                    <p class="mb-1">{{ item.Score }}</p>
+                    <small>{{ item.date }}</small>
+                </div>
+
+              <div class="col">
+                <form id="delete_form" action="{% url 'resume_education_single_delete' resume_id item.id %}" method="get">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
+
+
+          </div>
+
+          </a>
+
+
+          {% endfor %}
+            {% if instance == None %}
+               <a class="list-group-item list-group-item-action active" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">ADD A new Experience</h5>
+                </div>
+
+              </a>
+            {% else %}
+
+                <a href="{% url 'resume_education' resume_id %}" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">ADD A new Experience</h5>
+                    </div>
+
+                </a>
+            {% endif %}
+
+
+    </div>
+  </div>
+
+    {% else %}
+      <div class="col">
+      <div class="list-group">
+
+          <a class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">ADD A new Experience</h5>
+            </div>
+
+          </a>
+
+    </div>
+  </div>
+
+
+{% endif %}
+  <div class="col-md-8 order-md-2">
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="form-group row">
+
+        <div class="form-group col-md-6 mb-3">
+            <label for="cource_name">cource_name</label>
+            <input type="text" class="container-text input" id="cource_name" name="cource_name" placeholder="Enter the Name of cource_name">
+        </div>
+                <div class="form-group col-md-6 mb-3">
+            <label for="cource_location">cource_location?</label>
+            <input type="text" class="container-text input" id="cource_location" name="cource_location" placeholder="cource_location?">
+        </div>
+
+
+    </div>
+    <div class="form-group row">
+        <div class="form-group col mb-3">
+            <label for="date">date </label>
+            <input type="date" class="container-text input" id="date" placeholder="date" name="date">
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+           <textarea class="container-text input" aria-label="about_course" rows="5" name="about_course"></textarea>
+      </div>
+
+      <input type="submit" value="Save" class="save_button">
+
+</form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

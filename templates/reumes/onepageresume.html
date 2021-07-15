@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>One Page Resume</title>
+
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; }
+        .clear { clear: both; }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+     </style>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+    
+
+        {% for  contact in contacts%}
+            <div id="contact-info" class="vcard">
+
+                <!-- Microformats! -->
+
+                <h1 class="fn">{{ contact.firstname }} {{ contact.lastname }}</h1>
+
+                <p>
+                    Phone: <span class="tel">{{ contact.phonenumber }}</span><br />
+                    Email: <a class="email" href="mailto:{{ contact.email }}">{{ contact.email }}</a><br />
+                    <span class="tel">{{ contact.City }} , {{ contact.State }}, {{ contact.Country }}</span><br />
+                </p>
+            </div>
+        {% endfor  %}
+
+                
+        <div id="objective">
+            {% for  objective in objectives%}
+            <p>
+                {{ objective.Objective }}
+            </p>
+            {% endfor %}
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+            
+            <dt>Education</dt>
+
+
+            {% for  education in educations %}
+
+                <dd>
+
+                  <h2>{{ education.organization_name }} - {{ education.organization_location }}</h2>
+                  <p>{{ education.digree_major_qualification }} &mdash; <strong>{{ education.Score }}</strong><br/>
+                <h2> <span>{{ education.date }}</span></h2>
+                </dd>
+
+            {% endfor  %}
+            
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+            <dd>
+               <ul>{% for skill in skills %}
+                    <li>{{ skill.skill }}</li>
+                   {% endfor  %}
+                </ul>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Experience</dt>
+                <dd><ul>
+              {% for  experience in experiences %}
+
+               <li>
+
+
+
+                   <h2>{{ experience.compeny_worked_for }} <span>{{ experience.your_role }} - {{ experience.compeny_location }} - {{ experience.date_from }} - {{ experience.date_to }}</span></h2>
+                    <p>{{ experience.what_did_you_do }}</p>
+               </li>
+
+
+
+
+
+                {% endfor  %}
+                </ul></dd>
+            
+            <dd class="clear"></dd>
+            <dt>Projects</dt>
+
+
+            {% for  project in projects %}
+
+                <dd>
+
+                  <h2>{{ project.project_name }} - {{ project.organization_name }}</h2>
+                  <p>{{ project.what_did_you_do }}<br/>
+                <h2> <span>{{ project.date }}</span></h2>
+                </dd>
+
+            {% endfor  %}
+
+            <dd class="clear"></dd>
+
+
+            <dt>Hobbies</dt>
+            <dd>World Domination, Deep Sea Diving, Murder Most Foul</dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>References</dt>
+            <dd>Available on request</dd>
+            
+            <dd class="clear"></dd>
+        </dl>
+        
+        <div class="clear"></div>
+    
+    </div>
+
+</body>
+
+</html>

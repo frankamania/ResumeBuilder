@@ -1,0 +1,101 @@
+<div class="row">
+{% if instances != None%}
+  <div class="col-md-3 order-md-1 mb-3">
+      <div class="list-group">
+
+          {% for item in instances %}
+
+          <a href="{% url 'resume_certification_single' resume_id item.id %}" class="list-group-item {% if instance != None and item.id == instance.id %}active{% endif %}" aria-current="true">
+          <div class="row">
+                <div class="col">
+                    <div>
+                        <h5 class="mb-1">{{ item.certificaton_name }} from {{ item.certificaton_provider }}</h5>
+                    </div>
+                    <small>{{ item.date }}</small>
+                </div>
+
+              <div class="col">
+                <form id="delete_form" action="{% url 'resume_certification_single_delete' resume_id item.id %}" method="get">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
+
+
+          </div>
+
+          </a>
+
+
+          {% endfor %}
+            {% if instance == None %}
+               <a class="list-group-item list-group-item-action active" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">ADD A new {{ templ_type }}</h5>
+                </div>
+
+              </a>
+            {% else %}
+
+                <a href="{% url 'resume_certification' resume_id %}" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">ADD A new {{ templ_type }}</h5>
+                    </div>
+
+                </a>
+            {% endif %}
+
+
+    </div>
+  </div>
+
+    {% else %}
+      <div class="col-md-3 order-md-1 mb-3">
+      <div class="list-group">
+
+          <a class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">ADD A new Experience</h5>
+            </div>
+
+          </a>
+
+    </div>
+  </div>
+
+
+{% endif %}
+ <div class="col-md-8 order-md-2">
+    <form action="" method="post">
+        {% csrf_token %}
+            <div class="form-group row ">
+
+                <div class="form-group col-md-6 mb-3">
+
+                    <label for="{{ metadata.certificaton_name.name }}">{{ metadata.certificaton_name.label }}</label>
+                    <input type="text" class="container-text input" id="{{ metadata.certificaton_name.name }}" name="{{ metadata.certificaton_name.name }}" placeholder="{{ metadata.certificaton_name.placeholder }}">
+                </div>
+
+                        <div class="form-group col-md-6 mb-3">
+                    <label for="{{ metadata.certificaton_provider.name }}">{{ metadata.certificaton_provider.label }}</label>
+                    <input type="text" class="container-text input" id="{{ metadata.certificaton_provider.name }}" name="{{ metadata.certificaton_provider.name }}" placeholder="{{ metadata.certificaton_provider.placeholder }}">
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+
+                <div class="form-group mb-3">
+                    <label for="{{ metadata.date.name }}">{{ metadata.date.label }}</label>
+                    <input type="text" class="container-text input" id="{{ metadata.date.name }}" name="{{ metadata.date.name }}" placeholder="{{ metadata.date.placeholder }}">
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label for="{{ metadata.certificaton_About.name }}">{{ metadata.certificaton_About.label }}</label>
+                <textarea class="container-text input" id="{{ metadata.certificaton_About.name }}" name="{{ metadata.certificaton_About.name }}" cols="10" rows="5" placeholder="{{ metadata.certificaton_About.placeholder }}"></textarea>
+            </div>
+
+            <input type="submit" value="Save" class="save_button">
+    </form>
+ </div></div>

@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web 1920 – 1</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'xd_statics/Web_1920___1.css' %}"/>
+<script id="applicationScript" type="text/javascript" src="{% static 'xd_statics/Web_1920___1.js' %}"></script>
+</head>
+<body>
+<div id="Web_1920__1" class="Web_1920__1_Class">
+
+      {% block navigation %}
+                    {% include "xd_templates/top_navigation.html" %}
+      {% endblock %}
+
+      {% block container %}
+                    {% include "xd_templates/container.html" %}
+      {% endblock %}
+</div>
+</body>
+</html>

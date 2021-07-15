@@ -1,0 +1,8 @@
+
+
+<div>
+    <a href="{% url 'resume_download_pdf' resume_id %}" class="list-group-item btn" target="_blank" rel="noopener noreferrer"> Download as pdf</a>
+   <iframe id="encoder_iframe" height=100% width="100%" src="{% url 'resume_show_resume' resume_id %}"></iframe>
+
+
+  </div>

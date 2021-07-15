@@ -1,0 +1,89 @@
+<div class="row">
+
+
+  <div class="col-md-3 order-md-1 mb-3" >
+      <div class="list-group">
+
+          {% for item in instances %}
+
+              <a href="{% url 'resume_experience_single' resume_id item.id %}" class="list-group-item skillsgradient {% if instance != None and item.id == instance.id %}active{% endif %}" aria-current="true">
+          <div class="row">
+                <div class="col-md-8 order-md-1 mb-3">
+                    <div>
+                        <small>{{ item.compeny_worked_for }}, {{ item.compeny_location }}</small>
+                       <small>{{ item.your_role }}</small>
+                    </div>
+                    <small>{{ item.date_from }} - {{ item.date_to }}</small>
+
+
+                <form id="delete_form" class="skills" action="{% url 'resume_experience_single_delete' resume_id item.id %}" method="get">
+                    <button type="submit" class="list_item_btn">Delete</button>
+                </form>
+                </div>
+          </div>
+
+          </a>
+
+
+          {% endfor %}
+        <a {% if instance != None %}href="{% url 'resume_experience' resume_id %}" class="list-group-item btn" {% else %} class="active list-group-item btn"{% endif %}>ADD A new {{ templ_type }}</a>
+
+
+    </div>
+  </div>
+
+  <div class="col-md-8 order-md-2" >
+    <form action="" method="post">
+    {% csrf_token %}
+
+    <div class="form-group row">
+        <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.compeny_worked_for.name }}">{{ metadata.compeny_worked_for.label }}</label>
+            <input type="text" class="container-text input" id="{{ metadata.compeny_worked_for.name }}" name="{{ metadata.compeny_worked_for.name }}" placeholder="{{ metadata.compeny_worked_for.placeholder }}" {% if instance != None %} value="{{ instance.compeny_worked_for }}"{% endif %}>
+        </div>
+
+            <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.your_role.name }}">{{ metadata.your_role.label }}</label>
+            <input type="text" class="container-text input" id="{{ metadata.your_role.name }}" name="{{ metadata.your_role.name }}" placeholder="{{ metadata.your_role.placeholder }}" {% if instance != None %} value="{{ instance.your_role }}"{% endif %}>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+
+        <div class="form-group mb-3">
+            <label for="{{ metadata.compeny_location.name }}">{{ metadata.compeny_location.label }}</label>
+            <input type="text" class="container-text input" id="{{ metadata.compeny_location.name }}" name="{{ metadata.compeny_location.name }}" placeholder="{{ metadata.compeny_location.placeholder }}" {% if instance != None %} value="{{ instance.compeny_location }}"{% endif %}>
+        </div>
+    </div>
+
+    <div class="form-group row">
+
+        <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.date_from.name }}">{{ metadata.date_from.label }}</label>
+            <input type="date" class="container-text input" id="{{ metadata.date_from.name }}" name="{{ metadata.date_from.name }}" placeholder="{{ metadata.date_from.placeholder }}" {% if instance != None %} value="{{ instance.date_from }}"{% endif %}>
+        </div>
+
+        <div class="form-group col-md-6 mb-3">
+            <label for="{{ metadata.date_to.name }}">{{ metadata.date_to.label }}</label>
+            <input type="date" class="container-text input" id="{{ metadata.date_to.name }}"  name="{{ metadata.date_to.name }}" placeholder="{{ metadata.date_to.placeholder }}" {% if instance != None %} value="{{ instance.date_to }}"{% endif %}>
+        </div>
+
+    </div>
+
+       <div class="form-group row">
+            <label for="{{ metadata.what_did_you_do.name }}">{{ metadata.what_did_you_do.label }}</label>
+           <textarea class="container-text input" id="{{ metadata.what_did_you_do.name }}" name="{{ metadata.what_did_you_do.name }}" rows="5" placeholder="{{ metadata.what_did_you_do.placeholder }}">{{ instance.what_did_you_do }}</textarea>
+      </div>
+
+
+      <input type="submit" value="Save" class="save_button">
+
+</form>
+  </div>
+</div>
+
+
+
+
+
