@@ -13,7 +13,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         resume_id = 1
-        resume = Resume.objects.get(id=resume_id)
+        resume = Resume.objects.get(rid=resume_id)
         contact = Contact.objects.filter(resume=resume)
         objective = Objective.objects.filter(resume=resume)
         social = Socials.objects.filter(resume=resume)

@@ -7,7 +7,7 @@ from django.db import models
 
 
 class Resume(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    rid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.TextField(default= 'untitiled reume',null=False)
     template  = models.TextField(default= 'defautl_resume.html',null=False)
 

@@ -5,14 +5,14 @@ from ..meta import meta_data_skills
 
 
 def skills(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Skills.objects.filter(resume=resume)
     if request.method == 'POST':
 
         instance = Skills(resume=resume)
         instance.skill = request.POST.get("skill", "")
         instance.save()
-        return redirect('resume_skills_single', resume_id=resume.id, skills_id=instance.id)
+        return redirect('resume_skills_single', resume_id=resume.rid, skills_id=instance.id)
     else:
 
         instance = None
@@ -25,7 +25,7 @@ def skills(request, resume_id):
 
 
 def skills_single(request, resume_id, skills_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Skills.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -42,7 +42,7 @@ def skills_single(request, resume_id, skills_id):
 
 
 def skills_delete(request,resume_id, skills_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     Skills.objects.filter(resume=resume, id=skills_id).delete()
 
     instance = Skills.objects.filter(resume=resume)
@@ -54,7 +54,7 @@ def skills_delete(request,resume_id, skills_id):
 
 
     if instance != None:
-        return redirect('resume_skills_single', resume_id=resume.id, skills_id=instance.id)
+        return redirect('resume_skills_single', resume_id=resume.rid, skills_id=instance.id)
     else:
-        return redirect('resume_skills', resume_id=resume.id)
+        return redirect('resume_skills', resume_id=resume.rid)
 

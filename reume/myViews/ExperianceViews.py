@@ -5,7 +5,7 @@ from reume.models import Resume, Experience
 
 
 def experience(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Experience.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -17,7 +17,7 @@ def experience(request, resume_id):
         instance.date_to = request.POST.get("date_to", "")
         instance.what_did_you_do = request.POST.get("what_did_you_do", "")
         instance.save()
-        return redirect('resume_experience_single', resume_id=resume.id, experience_id=instance.id)
+        return redirect('resume_experience_single', resume_id=resume.rid, experience_id=instance.id)
     else:
 
         instance = None
@@ -30,7 +30,7 @@ def experience(request, resume_id):
 
 
 def experience_single(request, resume_id, experience_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Experience.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -52,7 +52,7 @@ def experience_single(request, resume_id, experience_id):
 
 
 def experience_delete(request,resume_id, experience_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     Experience.objects.filter(resume=resume, id=experience_id).delete()
 
     instance = Experience.objects.filter(resume=resume)
@@ -64,7 +64,7 @@ def experience_delete(request,resume_id, experience_id):
 
 
     if instance != None:
-        return redirect('resume_experience_single', resume_id=resume.id, experience_id=instance.id)
+        return redirect('resume_experience_single', resume_id=resume.rid, experience_id=instance.id)
     else:
-        return redirect('resume_experience', resume_id=resume.id)
+        return redirect('resume_experience', resume_id=resume.rid)
 

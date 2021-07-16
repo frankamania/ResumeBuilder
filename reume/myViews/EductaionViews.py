@@ -5,7 +5,7 @@ from ..meta import meta_data_education
 
 
 def education(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Education.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -17,7 +17,7 @@ def education(request, resume_id):
         instance.Score = request.POST.get("Score", "")
 
         instance.save()
-        return redirect('resume_education_single', resume_id=resume.id, education_id=instance.id)
+        return redirect('resume_education_single', resume_id=resume.rid, education_id=instance.id)
     else:
 
         instance = None
@@ -30,7 +30,7 @@ def education(request, resume_id):
 
 
 def education_single(request, resume_id, education_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Education.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -51,7 +51,7 @@ def education_single(request, resume_id, education_id):
 
 
 def education_delete(request,resume_id, education_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     Education.objects.filter(resume=resume, id=education_id).delete()
 
     instance = Education.objects.filter(resume=resume)
@@ -63,7 +63,7 @@ def education_delete(request,resume_id, education_id):
 
 
     if instance != None:
-        return redirect('resume_education_single', resume_id=resume.id, education_id=instance.id)
+        return redirect('resume_education_single', resume_id=resume.rid, education_id=instance.id)
     else:
-        return redirect('resume_education', resume_id=resume.id)
+        return redirect('resume_education', resume_id=resume.rid)
 

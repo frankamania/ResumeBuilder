@@ -5,7 +5,7 @@ from reume.models import Resume, Project
 
 
 def projects(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Project.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -15,7 +15,7 @@ def projects(request, resume_id):
         instance.what_did_you_do = request.POST.get("what_did_you_do", "")
         instance.date = request.POST.get("date", "")
         instance.save()
-        return redirect('resume_projects_single', resume_id=resume.id, projects_id=instance.id)
+        return redirect('resume_projects_single', resume_id=resume.rid, projects_id=instance.id)
     else:
 
         instance = None
@@ -28,7 +28,7 @@ def projects(request, resume_id):
 
 
 def projects_single(request, resume_id, projects_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Project.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -48,7 +48,7 @@ def projects_single(request, resume_id, projects_id):
 
 
 def projects_delete(request,resume_id, projects_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     Project.objects.filter(resume=resume, id=projects_id).delete()
 
     instance = Project.objects.filter(resume=resume)
@@ -60,7 +60,7 @@ def projects_delete(request,resume_id, projects_id):
 
 
     if instance != None:
-        return redirect('resume_projects_single', resume_id=resume.id, projects_id=instance.id)
+        return redirect('resume_projects_single', resume_id=resume.rid, projects_id=instance.id)
     else:
-        return redirect('resume_projects', resume_id=resume.id)
+        return redirect('resume_projects', resume_id=resume.rid)
 

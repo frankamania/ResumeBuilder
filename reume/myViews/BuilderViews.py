@@ -7,7 +7,7 @@ from ..meta import meta_data_social
 from django.template.loader import render_to_string
 
 def about(request,resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     if request.method == 'POST':
 
         if(Contact.objects.filter(resume=resume).exists()):
@@ -48,7 +48,7 @@ def about(request,resume_id):
     context = {"resume_id":resume_id,"templ_type":"abouts","instance":instance}
     return render(request, 'builder.html', context=context)
 def socials(request,resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     if request.method == 'POST':
 
         if (Socials.objects.filter(resume=resume).exists()):
@@ -102,7 +102,7 @@ def socials(request,resume_id):
     return render(request, 'builder.html', context=context)
 def objective(request,resume_id):
     
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     if request.method == 'POST':
 
         if (Objective.objects.filter(resume=resume).exists()):

@@ -5,7 +5,7 @@ from ..meta import meta_data_certicications
 
 
 def certification(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Certicications.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -16,7 +16,7 @@ def certification(request, resume_id):
         instance.certificaton_About = request.POST.get("certificaton_About", "")
 
         instance.save()
-        return redirect('resume_certification_single', resume_id=resume.id, certification_id=instance.id)
+        return redirect('resume_certification_single', resume_id=resume.rid, certification_id=instance.id)
     else:
 
         instance = None
@@ -29,7 +29,7 @@ def certification(request, resume_id):
 
 
 def certification_single(request, resume_id, certification_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     instances = Certicications.objects.filter(resume=resume)
     if request.method == 'POST':
 
@@ -49,7 +49,7 @@ def certification_single(request, resume_id, certification_id):
 
 
 def certification_delete(request,resume_id, certification_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     Certicications.objects.filter(resume=resume, id=certification_id).delete()
 
     instance = Certicications.objects.filter(resume=resume)
@@ -61,7 +61,7 @@ def certification_delete(request,resume_id, certification_id):
 
 
     if instance != None:
-        return redirect('resume_certification_single', resume_id=resume.id, certification_id=instance.id)
+        return redirect('resume_certification_single', resume_id=resume.rid, certification_id=instance.id)
     else:
-        return redirect('resume_certification', resume_id=resume.id)
+        return redirect('resume_certification', resume_id=resume.rid)
 

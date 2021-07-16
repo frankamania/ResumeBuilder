@@ -17,7 +17,7 @@ def home(request):
 
 
 def download_pdf(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     contact = Contact.objects.filter(resume=resume)
     objective = Objective.objects.filter(resume=resume)
     social = Socials.objects.filter(resume=resume)
@@ -58,10 +58,10 @@ def create_new_resume(request):
     resume = Resume()
     resume.save()
 
-    return redirect('resume_about', resume_id=resume.id)
+    return redirect('resume_about', resume_id=resume.rid)
 
 def finalresume(request,resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     contact = Contact.objects.filter(resume=resume)
     objective = Objective.objects.filter(resume=resume)
     social = Socials.objects.filter(resume=resume)
@@ -85,7 +85,7 @@ def finalresume(request,resume_id):
     return render(request, 'builder.html', context=context)
 
 def show_resume(request, resume_id):
-    resume = Resume.objects.get(id=resume_id)
+    resume = Resume.objects.get(rid=resume_id)
     contact = Contact.objects.filter(resume=resume)
     objective = Objective.objects.filter(resume=resume)
     social = Socials.objects.filter(resume=resume)
