@@ -16,9 +16,24 @@
           <h1 class="align-content-center">Build Your resume!</h1>
       </div>
   <div class="container">
-    <div>
+    <div >
 
-        <span> your Custum resume url : http://127.0.0.1:8000/{% url 'showresume' resume_id %} </span>
+
+        <div class="btn btn-primary">
+             <span> your Custum resume url :</span>
+            <p style="text-transform: lowercase; "> http://127.0.0.1:8000{% url 'showresume' resume_id %}</p>
+            <button class="btn btn-danger">copy url</button>
+        </div>
+        <div>
+
+            <br>
+            <p> You can use this url to access and edit your resume for the next 24hrs</p>
+            <br>
+            <p> your resume will be deleted after 24hrs from the time of creation make sure to download the pdf before this</p>
+            <br>
+        </div>
+
+
     </div>
 
 
