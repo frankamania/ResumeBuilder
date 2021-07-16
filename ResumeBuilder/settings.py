@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'ResumeBuilder.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "True") == "True"
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
@@ -143,7 +143,7 @@ STATICFILES_DIRS = [
 ]
 
 
-MEDIA_ROOT = 'G:\\ResumeBuilder\\media\\'
+MEDIA_ROOT = BASE_DIR /'media'
 
 
 
